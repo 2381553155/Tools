@@ -15,3 +15,18 @@ EXECUTE stmtsql; 
 DEALLOCATE PREPARE stmtsql;
 end //delimiter ;
 call selectWxpay('openid','=','oj9EwwDPJVPKnuk_68d_FEspFe8M');
+
+
+
+
+1、查询数据量中所有的记录条数
+
+select
+table_name,table_rows from information_schema.`TABLES` where
+table_schema='smartcs'
+
+ 
+
+select
+sum(table_rows) from information_schema.`TABLES` where table_schema='smartcs' 
+
