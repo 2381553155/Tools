@@ -1,0 +1,6 @@
+1、https://github.com/alvarotrigo/fullPage.js
+
+2、https://github.com/sivan/javascript-style-guide/blob/master/es5/README.md
+
+
+
