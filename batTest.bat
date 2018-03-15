@@ -47,7 +47,24 @@ echo %var%
 pause
 
 7、
-@echo offset /p str= Input a string :call :stringLength %str% numecho Length of %str% is %num% .pause:stringLengthset Return=0set strTemp=%1:loopif not "%strTemp%"=="" ( set /a Return=%Return%+1 set strTemp=%strTemp:~0,-1% echo %strTemp% goto:loop )set %2=%Return%
+@echo off
+set /p str= Input a string :
+call :stringLength %str% num
+echo Length of %str% is %num% .
+pause
+
+:stringLength
+set Return=0
+set strTemp=%1
+:loop
+if not "%strTemp%"=="" ( 
+  set /a Return=%Return%+1 
+  set strTemp=%strTemp:~0,-1% 
+  echo %strTemp% 
+  goto:loop 
+)
+set %2=%Return%
+
 
 
 
